@@ -26,7 +26,7 @@ const AddProduct = ({ onBack, onProductAdded }: AddProductProps) => {
   const [inputMode, setInputMode] = useState<"manual" | "iot">("manual");
 
   const categories = [
-    "Fruit", "Vegetable", "Meat", "Dairy", "Grain", "Bakery", "Seafood", "Herbs", "Nuts", "Other"
+    "Fruit", "Vegetable", "Meat", "Dairy", "Grain", "Bakery", "Seafood", "Herbs", "Nuts", "Packaged Food", "Other"
   ];
 
   const handleSubmit = (e: React.FormEvent) => {

@@ -120,7 +120,83 @@ const MonitoringView = ({ item, onBack }: MonitoringViewProps) => {
               </div>
             </div>
           </div>
-          <Progress value={currentFreshness} className="h-2" />
+          
+          {/* Interactive Status Indicators */}
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-medium">Status:</span>
+              <div className="flex items-center gap-1">
+                <div 
+                  className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                    item.status === "fresh" ? "bg-fresh animate-pulse shadow-fresh" : "bg-muted"
+                  }`}
+                  title="Fresh"
+                />
+                <div 
+                  className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                    item.status === "warning" ? "bg-warning animate-pulse shadow-warning" : "bg-muted"
+                  }`}
+                  title="Near Spoilage"
+                />
+                <div 
+                  className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                    item.status === "spoiled" ? "bg-danger animate-pulse shadow-danger" : "bg-muted"
+                  }`}
+                  title="Spoiled"
+                />
+              </div>
+            </div>
+            <Badge 
+              variant={item.status === "fresh" ? "default" : item.status === "warning" ? "secondary" : "destructive"}
+              className="animate-pulse text-sm px-3 py-1"
+            >
+              {item.status === "fresh" ? "✓ Fresh & Safe" : 
+               item.status === "warning" ? "⚠ Use Soon" : 
+               "✗ Check Before Use"}
+            </Badge>
+          </div>
+
+          {/* Enhanced Recommendations */}
+          <div className={`p-4 rounded-lg ${config?.bgColor} border-l-4 ${
+            item.status === "fresh" ? "border-fresh" :
+            item.status === "warning" ? "border-warning" :
+            "border-danger"
+          }`}>
+            <h4 className="font-semibold mb-2 flex items-center gap-2">
+              💡 Smart Recommendation
+            </h4>
+            <p className="text-sm">
+              {item.status === "fresh" && item.category === "Packaged Food" && (
+                <>📦 <strong>Packaged Food:</strong> Store in cool, dry place away from direct sunlight. Check packaging for any damage and verify expiry date regularly.</>
+              )}
+              {item.status === "fresh" && item.category === "Fruit" && (
+                <>🍎 <strong>Fresh Fruit:</strong> Perfect ripeness for consumption! Store at optimal temperature and humidity to maintain freshness longer.</>
+              )}
+              {item.status === "fresh" && !["Packaged Food", "Fruit"].includes(item.category) && (
+                <>✨ <strong>Optimal Quality:</strong> Product is in excellent condition. Follow proper storage guidelines to maintain freshness.</>
+              )}
+              
+              {item.status === "warning" && item.category === "Packaged Food" && (
+                <>⏰ <strong>Expiring Soon:</strong> Check expiry date and consume before deadline. Inspect packaging integrity before use.</>
+              )}
+              {item.status === "warning" && item.category === "Fruit" && (
+                <>🍌 <strong>Ripening:</strong> Consume within 1-2 days for best taste. Great for smoothies, baking, or cooking applications.</>
+              )}
+              {item.status === "warning" && !["Packaged Food", "Fruit"].includes(item.category) && (
+                <>⚠️ <strong>Use Soon:</strong> Quality may decline rapidly. Check for any visual, smell, or texture changes before consuming.</>
+              )}
+              
+              {item.status === "spoiled" && item.category === "Packaged Food" && (
+                <>❌ <strong>Check Required:</strong> Verify expiry date and inspect packaging for damage. Discard if compromised to avoid health risks.</>
+              )}
+              {item.status === "spoiled" && item.category === "Fruit" && (
+                <>🗑️ <strong>Inspect Carefully:</strong> Check for mold, unusual odor, or texture changes. Consider composting if spoiled to reduce waste.</>
+              )}
+              {item.status === "spoiled" && !["Packaged Food", "Fruit"].includes(item.category) && (
+                <>🚫 <strong>Safety First:</strong> Thoroughly inspect before consumption. When in doubt, discard to prevent foodborne illness.</>
+              )}
+            </p>
+          </div>
         </CardContent>
       </Card>
 

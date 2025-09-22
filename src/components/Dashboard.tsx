@@ -64,6 +64,19 @@ const Dashboard = ({ onAddProduct, onViewItem }: DashboardProps) => {
       temperature: 8,
       humidity: 82,
       gasLevel: 45
+    },
+    {
+      id: "4",
+      name: "Instant Noodles",
+      category: "Packaged Food",
+      type: "raw",
+      freshness: 92,
+      status: "fresh",
+      addedDate: new Date(Date.now() - 12 * 60 * 60 * 1000),
+      expiryDays: 180,
+      temperature: 25,
+      humidity: 45,
+      gasLevel: 8
     }
   ]);
 
@@ -187,17 +200,82 @@ const Dashboard = ({ onAddProduct, onViewItem }: DashboardProps) => {
                         </Badge>
                       </div>
                       
-                      <div className="mt-2 space-y-1">
+                      <div className="mt-2 space-y-2">
                         <div className="flex items-center justify-between text-xs">
-                          <span>Freshness</span>
+                          <span>Freshness Status</span>
                           <span className={`font-medium ${config.color}`}>
                             {item.freshness}%
                           </span>
                         </div>
-                        <Progress 
-                          value={item.freshness} 
-                          className="h-1.5"
-                        />
+                        
+                        {/* Interactive Status Indicators */}
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-1">
+                            <div 
+                              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                                item.status === "fresh" ? "bg-fresh animate-pulse" : "bg-muted"
+                              }`}
+                              title="Fresh"
+                            />
+                            <div 
+                              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                                item.status === "warning" ? "bg-warning animate-pulse" : "bg-muted"
+                              }`}
+                              title="Near Spoilage"
+                            />
+                            <div 
+                              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                                item.status === "spoiled" ? "bg-danger animate-pulse" : "bg-muted"
+                              }`}
+                              title="Spoiled"
+                            />
+                          </div>
+                          <Badge 
+                            variant={item.status === "fresh" ? "default" : item.status === "warning" ? "secondary" : "destructive"}
+                            className="text-xs animate-pulse"
+                          >
+                            {item.status === "fresh" ? "✓ Fresh" : 
+                             item.status === "warning" ? "⚠ Use Soon" : 
+                             "✗ Check"}
+                          </Badge>
+                        </div>
+
+                        {/* Smart Recommendations */}
+                        <div className={`p-2 rounded-md text-xs ${config.bgColor} border-l-2 ${
+                          item.status === "fresh" ? "border-fresh" :
+                          item.status === "warning" ? "border-warning" :
+                          "border-danger"
+                        }`}>
+                          {item.status === "fresh" && item.category === "Packaged Food" && (
+                            <span>📦 Store in cool, dry place. Check expiry date.</span>
+                          )}
+                          {item.status === "fresh" && item.category === "Fruit" && (
+                            <span>🍎 Perfect for consumption. Store properly to maintain freshness.</span>
+                          )}
+                          {item.status === "fresh" && !["Packaged Food", "Fruit"].includes(item.category) && (
+                            <span>✨ Optimal quality. Follow storage guidelines.</span>
+                          )}
+                          
+                          {item.status === "warning" && item.category === "Packaged Food" && (
+                            <span>⏰ Consume before expiry. Check packaging integrity.</span>
+                          )}
+                          {item.status === "warning" && item.category === "Fruit" && (
+                            <span>🍌 Consume within 1-2 days. Perfect for smoothies or cooking.</span>
+                          )}
+                          {item.status === "warning" && !["Packaged Food", "Fruit"].includes(item.category) && (
+                            <span>⚠️ Use soon for best quality. Check for any changes.</span>
+                          )}
+                          
+                          {item.status === "spoiled" && item.category === "Packaged Food" && (
+                            <span>❌ Check expiry date and packaging. Discard if compromised.</span>
+                          )}
+                          {item.status === "spoiled" && item.category === "Fruit" && (
+                            <span>🗑️ Inspect carefully. Compost if spoiled to reduce waste.</span>
+                          )}
+                          {item.status === "spoiled" && !["Packaged Food", "Fruit"].includes(item.category) && (
+                            <span>🚫 Inspect before use. Discard if signs of spoilage detected.</span>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
