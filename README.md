@@ -1,4 +1,4 @@
-Fresh Mate Project !
+Fresh Mate Project - Monitord food shelflife
 ## Project info
 
 **URL**: https://lovable.dev/projects/be18a657-cc9a-48e5-ab3b-a8e5ff2dd2c5
