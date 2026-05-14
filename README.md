@@ -57,6 +57,7 @@ This project is built with:
 - TypeScript
 - React
 - shadcn-ui
+- ML MODELS 
 - Tailwind CSS
 
 ## How can I deploy this project?
