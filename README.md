@@ -3,7 +3,7 @@ Fresh Mate Project - Monitoring  food shelflife for food freshness
 
 **URL**: https://lovable.dev/projects/be18a657-cc9a-48e5-ab3b-a8e5ff2dd2c5
 
-## How can I edit this code?
+## How can I edit  to this code?
 
 There are several new ways of editing your application.
 
