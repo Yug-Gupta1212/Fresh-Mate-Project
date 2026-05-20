@@ -1,4 +1,4 @@
-Fresh Mate Project - Monitoring  food shelflife for food freshness
+Fresh Mate Project - Monitoring  food shelflife to check food freshness
 ## Project info
 
 **URL**: https://lovable.dev/projects/be18a657-cc9a-48e5-ab3b-a8e5ff2dd2c5
