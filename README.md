@@ -5,7 +5,7 @@ Fresh Mate Project - Monitoring  food shelflife to check food freshness
 
 ## How can I edit  into this code?
 
-There are other more ways to editing your application.
+There are new more ways to editing your application.
 
 **Use Lovable**
 
