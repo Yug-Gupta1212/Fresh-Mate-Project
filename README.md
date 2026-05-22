@@ -41,7 +41,7 @@ Edit a new file directly in GitHub
 - Click the "Edit" button (pencil icon) at the top right of the file view.
 - Make your changes and commit the changes.
 
-Use GitHub Codespaces
+Use GitHub for Codespaces
 
 - Navigate to the main page of your repository.
 - Click on the "Code" button (green button) near the top right.
