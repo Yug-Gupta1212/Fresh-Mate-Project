@@ -51,7 +51,7 @@ Use GitHub for Codespaces
 
 ## What technologies are used for this project?
 
-This project is built with:
+This project is built using:
 
 - Vite
 - TypeScript
