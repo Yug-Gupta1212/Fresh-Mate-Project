@@ -1,13 +1,13 @@
 # 🥦 Fresh Mate — Food Shelf Life Monitor
 
-> **Know what's fresh. Waste less. Eat better.**
+> Know what's fresh. Waste less. Eat better.
 > Fresh Mate tracks your food's shelf life in real time so you never have to guess again.
 
 ---
 
 ## 📸 About the Project
 
-**Fresh Mate** is an intelligent food freshness monitoring app that helps you track expiry dates, monitor shelf life, and reduce food waste — powered by ML models that analyze food freshness from images and data.
+Fresh Mate is an intelligent food freshness monitoring app that helps you track expiry dates, monitor shelf life, and reduce food waste — powered by ML models that analyze food freshness from images and data.
 
 Whether it's leftovers in the fridge or packaged goods in the pantry, Fresh Mate keeps you informed before it's too late.
 
@@ -17,9 +17,9 @@ Whether it's leftovers in the fridge or packaged goods in the pantry, Fresh Mate
 
 - 📅 **Shelf Life Tracking** — Add food items with purchase/expiry dates and monitor their freshness countdown
 - 🤖 **ML-Powered Freshness Detection** — Uses machine learning models to predict food freshness
-- 🔔 **Expiry Alerts** — Get notified before food goes bad
-- 📊 **Freshness Dashboard** — Visual overview of all your food items and their status
-- 🗂️ **Category Management** — Organize items by type (dairy, produce, meat, etc.)
+- 🔔 Expiry Alerts — Get notified before food goes bad
+- 📊 Freshness Dashboard — Visual overview of all your food items and their status
+- 🗂️ Category Management — Organize items by type (dairy, produce, meat, etc.)
 
 ---
 
@@ -36,7 +36,7 @@ Whether it's leftovers in the fridge or packaged goods in the pantry, Fresh Mate
 
 ---
 
-## 🚀 Getting Started (VS Code / Local Development)
+## 🚀 Getting Started with (VS Code / Local Development)
 
 ### Prerequisites
 
