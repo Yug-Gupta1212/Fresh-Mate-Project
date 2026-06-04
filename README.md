@@ -1,7 +1,7 @@
 # 🥦 Fresh Mate — fFood Shelf Life Monitor
 
 > Know what's fresh. Waste less. Eat better.
-> Fresh Mate tracks your food's shelf life in real time so you never have to guess again.
+> Fresh Mate tracks your food's shelf life in real time so you never have to guess again..
 
 ---
 
