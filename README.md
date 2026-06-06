@@ -40,7 +40,7 @@ Whether it's leftovers in the fridge or packaged goods in the pantry, Fresh Mate
 
 ### Prerequisites
 
-Make sure you have **Node.js** and **npm** installed.
+Make sure you have **Node.js** and **npm** installed..
 > Recommended: install via [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 ```bash
