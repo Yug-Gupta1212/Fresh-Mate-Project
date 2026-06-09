@@ -19,7 +19,7 @@ Whether it's leftovers in the fridge or packaged goods in the pantry, Fresh Mate
 - 🤖 **ML-Powered Freshness Detection** — Uses machine learning models to predict food freshness
 - 🔔 Expiry Alerts — Get notified before food goes bad
 - 📊 Freshness Dashboard — Visual overview of all your food items and their status
-- 🗂️ Category Management — Organize items by type (dairy, produce, meat, etc.)
+- 🗂️ Category Management — Organize items by type (dairy, produce, meat, etc.).
 
 ---
 
