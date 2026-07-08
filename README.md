@@ -9,7 +9,7 @@
 
 Fresh Mate is an intelligent food freshness monitoring app that helps you track expiry dates, monitor shelf life, and reduce food waste — powered by ML models that analyze food freshness from images and data.
 
-Whether it's leftovers in the fridge or packaged goods in the pantry, Fresh Mate keeps you informed before it's too late.
+Whether it's leftovers in the fridge or packaged goods in the pantry, Fresh Mate keeps you informed before it's too late..
 
 ---
 
