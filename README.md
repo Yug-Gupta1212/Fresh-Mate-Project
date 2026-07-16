@@ -72,7 +72,7 @@ code .
 
 ---
 
-### Step 3 — Install Dependencies
+### Step 3 — Install Dependencies.
 
 ```bash
 npm install
